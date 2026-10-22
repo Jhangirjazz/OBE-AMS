@@ -31,4 +31,19 @@ class Program extends Model
     {
         return $this->hasMany(Plo::class);
     }
+
+    public function batches(): HasMany
+    {
+        return $this->hasMany(Batch::class);
+    }
+
+public function semesters(): HasMany
+    {
+    return $this->hasMany(Semester::class);
+    }
+
+public function courses(): HasMany
+    {
+    return $this->hasMany(Course::class);
+    }
 }

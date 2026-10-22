@@ -27,4 +27,11 @@ class Plo extends Model
             ->withPivot('correlation')
             ->withTimestamps();
     }
+
+    public function clos(): BelongsToMany
+    {
+    return $this->belongsToMany(Clo::class)
+        ->withPivot('correlation')
+        ->withTimestamps();
+    }
 }
